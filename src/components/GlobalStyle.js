@@ -11,8 +11,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    
   }
 
   * {
@@ -21,5 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
+    font-family: 'Rubik', sans-serif;
+    
   }
 `;

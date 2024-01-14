@@ -48,7 +48,7 @@ function App() {
             <ul>
             <TaskItem key={index} checked={task.checked} >
               <p>{task.text}</p>
-              <button colorButton={'yelow'} onClick={() => toggleChecked(index)}>
+              <button onClick={() => toggleChecked(index)}>
                   <i class="bx bx-check "></i>
               </button>
 

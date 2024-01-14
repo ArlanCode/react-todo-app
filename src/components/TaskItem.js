@@ -12,11 +12,12 @@ export const TaskItem = styled.li`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   list-style: none;
+  opacity: ${(props) => (props.checked ? 0.5 : 1)};
   
 
   p {
     width: 85%;
-    text-decoration-line: ${(props) => (props.color ? "line-through" : "")};
+    text-decoration-line: ${(props) => (props.checked ? "line-through" : "")};
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
