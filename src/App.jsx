@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button} from './components/Button'
 import { Input } from './components/Input'
 import { Form } from './components/Form'
@@ -6,11 +6,18 @@ import { Title } from './components/Title'
 import { Container } from './components/Container'
 import { TaskItem } from './components/TaskItem'
 import { Flex } from './components/Flex'
+import { ButtonIcon } from './components/ButtonIcon'
 
 
 function App() {
+  const storedTasks = localStorage.getItem('tasks');
+
   const [task, setTask] = useState("");
-  const [listTask, setListTask] = useState([]);
+  const [listTask, setListTask] = useState(storedTasks ? JSON.parse(storedTasks) : []);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(listTask));
+  }, [listTask]);
 
   function add(event){
     event.preventDefault()
@@ -45,18 +52,17 @@ function App() {
 
         <Flex>
           {listTask.map((task, index) => (
-            <ul>
+            <>
             <TaskItem key={index} checked={task.checked} >
               <p>{task.text}</p>
-              <button onClick={() => toggleChecked(index)}>
+              <ButtonIcon colorHover={"#00FA9A"} onClick={() => toggleChecked(index)}>
                   <i class="bx bx-check "></i>
-              </button>
-
-              <button onClick={() => removeTask(index)} >
+              </ButtonIcon>
+              <ButtonIcon colorHover={"#FF0000"} onClick={() => removeTask(index)} >
                   <i  class="bx bx-x "></i>
-              </button>
+              </ButtonIcon>
             </TaskItem>
-            </ul>
+            </>
           ))}
         </Flex>
       </Container>

@@ -6,7 +6,7 @@ export const TaskItem = styled.li`
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 13px 10px 13px 24px;
-  width: 500px;
+  width: 95%;
   min-height: 50px;
   background: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
@@ -16,29 +16,12 @@ export const TaskItem = styled.li`
   
 
   p {
-    width: 85%;
+    width: 80%;
     text-decoration-line: ${(props) => (props.checked ? "line-through" : "")};
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     overflow-wrap: break-word;
-  }
-
-  button {
-    background: transparent;
-    border: none;
-    color: gray;
-    cursor: pointer;
-    
-
-    &:hover {
-      opacity: 0.8;
-      color: black;
-      
-    }
-    &:active {
-      opacity: 0.8;
-    }
   }
 
   i {

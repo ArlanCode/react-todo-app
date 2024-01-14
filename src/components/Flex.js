@@ -6,4 +6,5 @@ export const Flex = styled.div`
   justify-content: ${(props) => props.justify || "center"};
   align-items: ${(props) => props.align || "center"};
   gap: ${(props) => props.gap || "16px"};
+  width: 100%;
 `;
