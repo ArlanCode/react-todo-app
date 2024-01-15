@@ -2,10 +2,11 @@
 Este é um projeto de uma aplicação To-Do List desenvolvida em React com Styled Components, utilizando Vite para a configuração do projeto e localStorage para persistência de dados.
 
 ## Tecnologias Utilizadas
--React
--Styled Components
--localStorage (para persistência de dados)
--Vite (para configuração do projeto)
+
+- React
+- Styled Components
+- localStorage (para persistência de dados)
+- Vite (para configuração do projeto)
 
 
 ## Funcionalidades
